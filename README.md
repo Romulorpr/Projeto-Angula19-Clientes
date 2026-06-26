@@ -1,59 +1,95 @@
-# ProjetoAngularClientes
+# 📋 Projeto Angular Clientes
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.0.2.
+Projeto desenvolvido para fins acadêmicos com o objetivo de praticar o desenvolvimento de aplicações web modernas com Angular 19, implementando um CRUD completo de clientes com consumo de API REST externa para busca de localidades brasileiras.
 
-## Development server
+---
 
-To start a local development server, run:
+## 🚀 Tecnologias Utilizadas
+
+- **Angular CLI 19.0.0**
+- **TypeScript**
+- **SCSS**
+
+## 📦 Bibliotecas
+
+| Biblioteca | Versão | Descrição |
+|---|---|---|
+| Angular Material | 19 | Componentes de UI (cards, forms, toolbar, snackbar, etc.) |
+| @ngbracket/ngx-layout | 19 | Layout responsivo com diretivas Flexbox (`fxLayout`, `fxFlex`) |
+| ngx-mask | 19.0.0 | Máscara de campos (CPF, telefone, CEP, etc.) |
+| uuid | 11.0.2 | Geração de IDs únicos para os registros |
+
+---
+
+## 📁 Estrutura do Projeto
+
+```
+src/
+└── app/
+    ├── cadastro/          # Componente de criação e edição de clientes
+    ├── consulta/          # Componente de listagem e busca de clientes
+    ├── cliente.ts         # Model da entidade Cliente
+    ├── cliente.service.ts # Service com operações CRUD
+    ├── brasilapi.service.ts # Service de consumo da BrasilAPI
+    └── brasilapi.models.ts  # Models de Estado e Município
+```
+
+---
+
+## 🌐 API Consumida
+
+O projeto consome a **[BrasilAPI](https://brasilapi.com.br/)** para popular os campos de Estado e Município no formulário de cadastro, sem necessidade de autenticação.
+
+Endpoints utilizados:
+
+- `GET /api/ibge/uf/v1` — Lista todos os estados brasileiros
+- `GET /api/ibge/municipios/v1/{sigla}` — Lista municípios por estado
+
+---
+
+## ⚙️ Como Executar
+
+**Pré-requisitos:** Node.js e Angular CLI 19 instalados.
 
 ```bash
+# Clonar o repositório
+git clone https://github.com/Romulorpr/Projeto-Angular-Clientes.git
+
+# Entrar na pasta
+cd Projeto-Angular-Clientes
+
+# Instalar dependências
+npm install
+
+# Rodar o projeto
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Acesse em: `http://localhost:4200`
 
-## Code scaffolding
+---
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## ✨ Funcionalidades
 
-```bash
-ng generate component component-name
-```
+- Cadastro de clientes com validação de formulário
+- Listagem e consulta de clientes cadastrados
+- Edição e exclusão de registros
+- Seleção de Estado e Município via BrasilAPI
+- Máscara automática nos campos de CPF e telefone
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+---
 
-```bash
-ng generate --help
-```
+## 📚 Contexto Acadêmico
 
-## Building
+Projeto desenvolvido como prática do curso de **Análise e Desenvolvimento de Sistemas**, com foco em:
 
-To build the project run:
+- Componentização com Angular standalone
+- Consumo de API REST com `HttpClient`
+- Roteamento com `RouterLink` e `ActivatedRoute`
+- Uso de bibliotecas do ecossistema Angular moderno
 
-```bash
-ng build
-```
+---
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+## 👨‍💻 Autor
 
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+**Romulo** — [github.com/Romulorpr](https://github.com/Romulorpr)
