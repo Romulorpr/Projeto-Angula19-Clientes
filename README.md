@@ -1,21 +1,21 @@
 # 📋 Projeto Angular Clientes
 
-Projeto desenvolvido para fins acadêmicos com o objetivo de praticar o desenvolvimento de aplicações web modernas com Angular 19, implementando um CRUD completo de clientes com consumo de API REST externa para busca de localidades brasileiras.
+Projeto desenvolvido para fins acadêmicos com o objetivo de praticar o desenvolvimento de aplicações web modernas com Angular 19, implementando um CRUD completo de clientes com consumo de API REST externa para busca de localidades brasileiras, e persistência de dados via localStorage.
 
 ---
 
 ## 🚀 Tecnologias Utilizadas
 
 - **Angular CLI 19.0.0**
-- **TypeScript**
+- **TypeScript 5.6.2**
 - **SCSS**
 
 ## 📦 Bibliotecas
 
 | Biblioteca | Versão | Descrição |
 |---|---|---|
-| Angular Material | 19 | Componentes de UI (cards, forms, toolbar, snackbar, etc.) |
-| @ngbracket/ngx-layout | 19 | Layout responsivo com diretivas Flexbox (`fxLayout`, `fxFlex`) |
+| Angular Material | 19.2.19 | Componentes de UI (cards, forms, toolbar, snackbar, etc.) |
+| @ngbracket/ngx-layout | 19.0.0 | Layout responsivo com diretivas Flexbox (`fxLayout`, `fxFlex`) |
 | ngx-mask | 19.0.0 | Máscara de campos (CPF, telefone, CEP, etc.) |
 | uuid | 11.0.2 | Geração de IDs únicos para os registros |
 
